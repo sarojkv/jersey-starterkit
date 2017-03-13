@@ -26,16 +26,16 @@ public class Demo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-//		 demoSimpleRankAndOrder();
+		//demoSimpleRankAndOrder();
 
-		// demoSchedulersRunning();
+		 //demoSchedulersRunning();
 
 		demoSimpleRankAndOrderProcessingPipeline();
 	}
 
 	private static void demoSimpleRankAndOrder() {
 
-		// create stocks in certain with differet rank and must return sorted
+		// create stocks in certain with different rank and must return sorted
 		// with ranked order, order id
 		//
 

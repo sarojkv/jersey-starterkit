@@ -54,7 +54,7 @@ public class UserStockRequestDAO {
 		// TODO : implementation
 		// TODO: exception handling, if DB fails, remove from Q
 
-		// keeping a write through cache that where the data is based on
+		// keeping a write through cache 
 		// TODO: we cam use an ORM (hibernate) backed with caching solution to
 		// implement this
 		// right now handcoded

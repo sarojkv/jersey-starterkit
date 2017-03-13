@@ -20,9 +20,10 @@ public class InvestmentQueryImpl implements InvestmentQuery {
 	public ReceiptMessage trade(UserStockRequest userStockRequest) {
 		System.out.println("Trading stock: " + userStockRequest);
 		ReceiptMessage receiptMessage = new ReceiptMessage();
+		//exception handling to be done here.
 		if(UserStockRequestDAO.saveStockRequest(userStockRequest)){
 			receiptMessage.setSuccess(true);
-			receiptMessage.setMessage("200 OK, all set. Added request for trade");
+			receiptMessage.setMessage("Added request for trade");
 		}else{
 			receiptMessage.setSuccess(false);
 			receiptMessage.setMessage("Could not add");
