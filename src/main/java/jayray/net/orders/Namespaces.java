@@ -5,4 +5,5 @@ public class Namespaces {
 	}
 
 	public static final String OrdersNamespace = "http://jayray.net/orders";
+	
 }

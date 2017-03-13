@@ -25,7 +25,7 @@ public class CustomerDao {
 
 		customer = new Customer();
 		customer.setId("1");
-		customer.setName("Mighty Pulpo");
+		customer.setName("Saroj K");
 		address = new Address();
 		address.setCity("Austin");
 		address.setState("TX");

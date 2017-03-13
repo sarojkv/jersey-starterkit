@@ -6,6 +6,8 @@ repositories {
     mavenCentral()
 }
 
+war.archiveName "stocks.war"
+
 dependencies {
 	compile "javax.ws.rs:jsr311-api:1.1.1"
 

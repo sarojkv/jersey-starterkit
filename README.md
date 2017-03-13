@@ -1,33 +1,17 @@
 Overview
 ========
-This is a starter project using jax-rs / jersey.  I've created this because I often find myself wanting to expirement with something that needs a webservice, and this gives me a starting spot.  Clone or fork and use as needed.
-
-Note: if you like this version, I highly recommend checking out the sample dropwizard implemenation [https://github.com/jasonray/jersey-starterkit/tree/dropwizard], much better for quick implemenations of java based web services.  I love me some dropwizard.  Until I discovered node/express. 
+Sample stocks project. Starter kit forked from : https://github.com/jasonray/jersey-starterkit 
 
 How-to run
 ==========
 0.1) Pre-req
 
 You will need the following installed:
-Java
-Gradle (optional)
-A java web container, such as Tomcat.
+Java 
+Gradle 
+Tomcat.
 
-If you are on a mac, I recommend to do the following:
-install homebew (see: http://brew.sh/)
-from commnd line, install java and Tomcat:
-`brew install java'
-'brew install apache`
 
-If you will be using Tomcat, you will likely want to make sure you have CATALINA_HOME set.  
-On a mac, edit your profile
-```
-vi ~/.bash_profile
-```
-
-and then add the following (replacing with the directory where you Tomcat instance is deployed:
-```
-export CATALINA_HOME=/usr/local/Cellar/tomcat/8.5.9/libexec
 ```
 
 1) Compile
@@ -41,15 +25,13 @@ If you do not have gradle installed, you can utilize the gradle wrapper included
 ./gradlew war
 ```
 
-The war file is compiled to: `build/libs/jersey-starterkit.war`
+The war file is compiled to: `build/libs/stocks.war`
 
 
-2) Deploy the war file to web container.  I've been using apache-tomcat [http://tomcat.apache.org], and typically copy the war to the tomcat webapps directory.  On my machine:
-```
-cp build/libs/jersey-starterkit.war /Applications/apache-tomcat-6.0.33/webapps/
+2) Deploy the war file to web container. 
 ```
 
-Shortcut: if you are using tomcat, and $CATALINA_HOME is set, you can run: `./deploy.sh`
+Shortcut: if you are using tomcat, and $CATALINA_HOME is set, you can run: `./deploy.bat or ./deploy.sh`
 
 
 3) Confirm that it is running by fetching the URL at on webcontainer + /jersey-helloworld/rest/hello.  On my machine:
