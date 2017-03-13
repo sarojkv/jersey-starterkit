@@ -70,7 +70,7 @@ public class StocksTraderImpl implements StocksTrader {
 	 * @throws StockProcessingException
 	 */
 	private void performTradingOnStock(UserStockRequest userStockRequest) throws StockProcessingException {
-		System.out.println("Processing stock: " + userStockRequest);
+		//System.out.println("Processing stock: " + userStockRequest);
 	}
 
 }

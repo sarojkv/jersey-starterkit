@@ -5,6 +5,7 @@ package jayray.net.stocks.tasks;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Queue;
 import java.util.TimerTask;
 
 import jayray.net.stocks.bl.StocksTrader;
@@ -29,7 +30,7 @@ public class StocksTradingTask extends TimerTask {
 
 		// get the list of stocks that are available to be traded after being analyzed
 		//
-		List<UserStockRequest> userStocksToTrade = UserStockRequestDAO.getStockToTrade(THRESOLD_RANK);
+		Queue<UserStockRequest> userStocksToTrade = UserStockRequestDAO.getStockToTrade(THRESOLD_RANK);
 		//TODO: move to a factory class
 		StocksTrader stocksTrader = new StocksTraderImpl();
 		

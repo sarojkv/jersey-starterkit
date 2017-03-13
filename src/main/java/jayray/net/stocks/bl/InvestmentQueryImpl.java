@@ -18,6 +18,7 @@ public class InvestmentQueryImpl implements InvestmentQuery {
 	 */
 	@Override
 	public ReceiptMessage trade(UserStockRequest userStockRequest) {
+		System.out.println("Trading stock: " + userStockRequest);
 		ReceiptMessage receiptMessage = new ReceiptMessage();
 		if(UserStockRequestDAO.saveStockRequest(userStockRequest)){
 			receiptMessage.setSuccess(true);

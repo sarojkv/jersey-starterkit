@@ -22,7 +22,7 @@ import java.util.Date;
  * @author Saroj
  *
  */
-public class UserStockRequest implements Serializable, Comparable<UserStockRequest> {
+public class UserStockRequest implements Serializable, Cloneable, Comparable<UserStockRequest> {
 
 	
 	private static final long serialVersionUID = 1L;

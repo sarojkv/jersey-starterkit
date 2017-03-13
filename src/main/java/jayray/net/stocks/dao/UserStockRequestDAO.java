@@ -63,6 +63,7 @@ public class UserStockRequestDAO {
 		// Add to StocksToTrade table
 		//
 		// TODO:
+		MockDatabase.persistStockRequests(userStockRequest);
 
 		return true;
 	}
@@ -70,9 +71,9 @@ public class UserStockRequestDAO {
 	public static boolean updateStockRequest(UserStockRequest userStockRequest) {
 		
 		//will update the user stock request in the persistent store
-		//right now use a list
+		//right now using Mock
 		//
-		
+		MockDatabase.persistStockRequests(userStockRequest);
 		
 		return true;
 	}
@@ -105,9 +106,9 @@ public class UserStockRequestDAO {
 	 * @return
 	 * 		will return all request that are greater than the thresold rank
 	 */
-	public static List<UserStockRequest> getStockToTrade(int tHRESOLD_RANK) {
+	public static Queue<UserStockRequest> getStockToTrade(int tHRESOLD_RANK) {
 		//TODO: get the list
-		List<UserStockRequest> stockRequests = new ArrayList<UserStockRequest>();
+		Queue<UserStockRequest> stockRequests = MockDatabase.getStockRequestsForRankGreaterThan(tHRESOLD_RANK);
 		System.out.println("Number of analyzed records to be processed for thresold:" + tHRESOLD_RANK + " are: "+ stockRequests.size());
 		return stockRequests;
 	}

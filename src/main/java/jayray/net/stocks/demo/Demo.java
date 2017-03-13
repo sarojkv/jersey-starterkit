@@ -26,11 +26,11 @@ public class Demo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// demoSimpleRankAndOrder();
+//		 demoSimpleRankAndOrder();
 
 		// demoSchedulersRunning();
 
-		// simpleRankAndOrderProcessingPipeline();
+		demoSimpleRankAndOrderProcessingPipeline();
 	}
 
 	private static void demoSimpleRankAndOrder() {
@@ -52,10 +52,12 @@ public class Demo {
 				QueryType.BUY, 150/* Rank */, new Date(), StockRequestStatus.NEW, "");
 
 		// send 3 requests
-		UserStockRequestDAO.saveStockRequest(stockRequest1);
-		UserStockRequestDAO.saveStockRequest(stockRequest2);
-		UserStockRequestDAO.saveStockRequest(stockRequest3);
-		UserStockRequestDAO.saveStockRequest(stockRequest4);
+		InvestmentQuery query = new InvestmentQueryImpl();
+		// send 3 requests
+		query.trade(stockRequest1);
+		query.trade(stockRequest2);
+		query.trade(stockRequest3);
+		query.trade(stockRequest4);
 
 		// get back the 3 request
 		//
@@ -83,21 +85,10 @@ public class Demo {
 		time2.schedule(tradingTask, 0, 2000);// every 2 secs
 	}
 
-	private static void simpleRankAndOrderProcessingPipeline() {
+	private static void demoSimpleRankAndOrderProcessingPipeline() {
 
-		// start the scheduler
-		//
-		Timer time = new Timer(); // Instantiate Timer Object
-		InvestmentAnalyzerTask analyzerTask = new InvestmentAnalyzerTask();
-		time.schedule(analyzerTask, 0, 3000);// every 3 secs
-
-		if (true)
-			return;
-
-		// create stocks in certain with differet rank and must return sorted
-		// with ranked order, order id
-		//
-
+		demoSchedulersRunning();
+		
 		UserStockRequest stockRequest1 = new UserStockRequest(new Long(1), "U1", "S1", new Double(100), new Long(5),
 				QueryType.BUY, 100/* Rank */, new Date(), StockRequestStatus.NEW, "");
 
@@ -109,14 +100,20 @@ public class Demo {
 
 		UserStockRequest stockRequest4 = new UserStockRequest(new Long(4), "U1", "S1", new Double(100), new Long(5),
 				QueryType.BUY, 150/* Rank */, new Date(), StockRequestStatus.NEW, "");
+		
+		UserStockRequest stockRequest5 = new UserStockRequest(new Long(5), "U1", "S1", new Double(100), new Long(5),
+				QueryType.BUY, 75/* Rank */, new Date(), StockRequestStatus.NEW, "");
 
+		// send 3 requests
 		InvestmentQuery query = new InvestmentQueryImpl();
 		// send 3 requests
 		query.trade(stockRequest1);
 		query.trade(stockRequest2);
 		query.trade(stockRequest3);
 		query.trade(stockRequest4);
-
+		query.trade(stockRequest5);
+		
+		
 	}
 
 }
