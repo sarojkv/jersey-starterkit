@@ -22,7 +22,7 @@ import java.util.Date;
  * @author Saroj
  *
  */
-public class UserStockRequest implements Serializable, Cloneable, Comparable<UserStockRequest> {
+public class UserStockRequest implements Serializable, Comparable<UserStockRequest> {
 
 	
 	private static final long serialVersionUID = 1L;
@@ -220,7 +220,7 @@ public class UserStockRequest implements Serializable, Cloneable, Comparable<Use
 		//if rank < otherObject rank then this to be processed later for 1
 		//if rank is equal, then FIFO based on orderid
 		//then based on orderid
-		// agai, orderid < otherObject, then it should be first, so -1
+		// again, orderid < otherObject, then it should be first, so -1
 		//
 		if(this.rank.intValue() > otherObject.rank.intValue())
 			return -1;

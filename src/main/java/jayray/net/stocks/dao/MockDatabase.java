@@ -25,7 +25,7 @@ public class MockDatabase {
 
 	// TODO: clone the object
 
-	// can use a Set to em
+	// mock table
 	private static final List<UserStockRequest> userStocks = Collections
 			.synchronizedList(new ArrayList<UserStockRequest>(10));
 

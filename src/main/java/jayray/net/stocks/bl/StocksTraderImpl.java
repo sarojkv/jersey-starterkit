@@ -3,7 +3,6 @@
  */
 package jayray.net.stocks.bl;
 
-import jayray.net.stocks.dao.StocksDAO;
 import jayray.net.stocks.dao.UserStockRequestDAO;
 import jayray.net.stocks.domain.StockRequestStatus;
 import jayray.net.stocks.domain.UserStockRequest;
