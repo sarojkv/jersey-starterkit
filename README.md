@@ -1,6 +1,7 @@
+Sample stocks project. Starter kit forked from : https://github.com/jasonray/jersey-starterkit 
 Overview
 ========
-Sample stocks project. Starter kit forked from : https://github.com/jasonray/jersey-starterkit 
+https://docs.google.com/document/d/12-KhgEIMgJnAqB0KIIEC0CTtv2VNoaL6vTAThYAdhmk/edit?usp=sharing
 
 How-to run
 ==========
@@ -33,7 +34,5 @@ The war file is compiled to: `build/libs/stocks.war`
 
 Shortcut: if you are using tomcat, and $CATALINA_HOME is set, you can run: `./deploy.bat or ./deploy.sh`
 
-Design Details
-==============
-https://docs.google.com/document/d/12-KhgEIMgJnAqB0KIIEC0CTtv2VNoaL6vTAThYAdhmk/edit?usp=sharing 
+ 
 
